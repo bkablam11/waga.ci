@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>WAGA - Workshop d'Algèbre et Géométrie Abidjan 2025</title>
@@ -45,6 +41,8 @@
 										<h1>WAGA — Workshop d'Algèbre et Géométrie</h1>
 										<p class="hero-sub">Programme national de rencontres scientifiques et pédagogiques — Abidjan, 28–29 novembre 2025</p>
 										<p class="hero-actions"><a href="#programme" class="button big primary">Voir le programme</a> <a href="#communicateurs" class="button">Communicateurs</a></p>
+										<!-- Countdown timer to 28 Nov 2025 -->
+										<div id="countdown" class="countdown" role="status" aria-live="polite">Chargement du décompte…</div>
 									</div>
 								</div>
 							</section>
@@ -312,11 +310,37 @@
 					</div>
 				</div>
 
-			<!-- Scripts -->
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/browser.min.js"></script>
-				<script src="assets/js/breakpoints.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<script src="assets/js/main.js"></script>
-			</body>
-	</html>
+							<!-- Scripts -->
+								<script src="assets/js/jquery.min.js"></script>
+								<script src="assets/js/browser.min.js"></script>
+								<script src="assets/js/breakpoints.min.js"></script>
+								<script src="assets/js/util.js"></script>
+								<script src="assets/js/main.js"></script>
+								<!-- Countdown script: décompte jusqu'au 28 novembre 2025 -->
+								<script>
+								(function(){
+								  // Target date: 28 November 2025 at 09:00 local time
+								  var target = new Date('2025-11-28T09:00:00');
+								  var el = document.getElementById('countdown');
+								  if(!el) return;
+								  function pad(n){return n<10?('0'+n):n}
+								  function update(){
+								    var now = new Date();
+								    var diff = target - now;
+								    if(diff <= 0){
+								      el.textContent = 'Le workshop a commencé.';
+								      clearInterval(timer);
+								      return;
+								    }
+								    var sec = Math.floor(diff/1000);
+								    var days = Math.floor(sec/86400); sec -= days*86400;
+								    var hours = Math.floor(sec/3600); sec -= hours*3600;
+								    var mins = Math.floor(sec/60); sec -= mins*60;
+								    el.textContent = days + ' j  ' + pad(hours) + ' h ' + pad(mins) + ' m ' + pad(sec) + ' s';
+								  }
+								  update();
+								  var timer = setInterval(update,1000);
+								})();
+								</script>
+							</body>
+					</html>

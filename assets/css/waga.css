@@ -22,7 +22,7 @@ body{font-family:var(--body);color:var(--text)}
 .hero-text{flex:1}
 .hero h1{font-family:var(--heading);font-size:32px;margin:0 0 8px;color:var(--primary)}
 .hero-sub{color:#666;margin:6px 0 18px}
-.countdown{font-weight:600;color:var(--text);margin:10px 0;padding:10px;background:#fff;border:1px solid #eee;display:inline-block;border-radius:6px}
+.countdown{font-weight:800;color:#c0392b;margin:18px 0;padding:6px 12px;background:transparent;border:5px solid rgba(192,57,43,0.12);display:inline-block;border-radius:8px;font-size:28px;line-height:1;letter-spacing:0.6px;text-shadow:0 1px 0 rgba(255,255,255,0.12)}
 .button.primary{background:var(--primary);color:#fff}
 .hero-image img{max-width:320px;border-radius:6px}
 /* Sections */
