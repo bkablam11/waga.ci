@@ -1,0 +1,68 @@
+/* WAGA custom styles - minimal base to complement template's main.css */
+:root{
+  --primary:#0b5fa5; /* deep blue */
+  --accent:#f39c12; /* amber/orange */
+  --muted:#f5f5f5;
+  --text:#222;
+  --heading:'Montserrat', sans-serif;
+  --body:'Open Sans', sans-serif;
+}
+body{font-family:var(--body);color:var(--text)}
+/* Header */
+#header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:#fff;border-bottom:1px solid #eee}
+#header .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.logo-img{width:44px;height:44px}
+.top-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px}
+.top-nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:4px}
+.top-nav a.cta{background:var(--accent);color:#fff}
+.top-nav a:hover{background:rgba(11,95,165,0.06)}
+/* Hero */
+.hero{background:linear-gradient(180deg, #f8fbff, #ffffff);padding:48px 0}
+.hero-inner{display:flex;gap:40px;align-items:center;max-width:1100px;margin:0 auto;padding:0 20px}
+.hero-text{flex:1}
+.hero h1{font-family:var(--heading);font-size:32px;margin:0 0 8px;color:var(--primary)}
+.hero-sub{color:#666;margin:6px 0 18px}
+.countdown{font-weight:600;color:var(--text);margin:10px 0;padding:10px;background:#fff;border:1px solid #eee;display:inline-block;border-radius:6px}
+.button.primary{background:var(--primary);color:#fff}
+.hero-image img{max-width:320px;border-radius:6px}
+/* Sections */
+section.waga-section{max-width:1100px;margin:40px auto;padding:0 20px}
+.waga-section h2{font-family:var(--heading);color:var(--primary);margin-bottom:12px}
+/* Speakers grid */
+.speakers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.speaker-card{background:#fff;border:1px solid #eee;padding:14px;border-radius:8px;cursor:pointer;transition:box-shadow .18s}
+.speaker-card img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+.speaker-card h4{margin:10px 0 4px;font-size:16px}
+.speaker-card p{margin:0;color:#666;font-size:14px}
+.speaker-card:hover{box-shadow:0 8px 18px rgba(20,30,50,0.06)}
+/* Program tabs */
+.program-tabs{border:1px solid #eee;border-radius:6px;padding:12px;background:#fff}
+.tab-buttons{display:flex;gap:8px;margin-bottom:12px}
+.tab-buttons button{padding:8px 12px;border:1px solid #ddd;background:#fafafa;border-radius:4px;cursor:pointer}
+.tab-buttons button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-content{padding:8px}
+/* Forms */
+.form-row{display:flex;flex-wrap:wrap;gap:8px}
+.form-row input,.form-row select,textarea{padding:8px;border:1px solid #ddd;border-radius:4px;width:100%}
+.form-actions{margin-top:12px}
+/* Sponsors */
+.sponsors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px;align-items:center}
+.sponsors-grid img{max-width:140px;opacity:0.95}
+/* Contact */
+.contact-card{background:#fff;padding:16px;border-radius:6px;border:1px solid #eee}
+/* Projects & Minutes */
+.project-benefits{display:list-item;list-style:disc;margin-left:20px}
+.project-team{list-style:none;padding:0;margin:8px 0}
+.project-team li{background:#fff;border:1px solid #f0f0f0;padding:8px;border-radius:6px;margin-bottom:6px}
+.minutes-entry{background:#fff;padding:12px;border-radius:6px;border:1px solid #eee;margin-bottom:12px}
+.minutes-entry h3{margin-top:0;color:var(--primary)}
+.downloads-list li{margin-bottom:6px}
+/* Responsive */
+@media(max-width:880px){
+  .hero-inner{flex-direction:column;align-items:flex-start}
+  .hero-image img{max-width:100%}
+  .top-nav ul{display:none}
+}
+
+/* Small utilities */
+.waga-section h4{margin-top:14px}
