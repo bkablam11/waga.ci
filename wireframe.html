@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Wireframe — WAGA site</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:24px}
+      .box{background:#eee;border:1px dashed #bbb;padding:18px;margin-bottom:12px;border-radius:6px}
+      header.box{height:68px}
+      nav.box{height:48px}
+      .hero.box{height:160px}
+      .cols{display:flex;gap:12px}
+      .col{flex:1}
+      footer.box{height:48px}
+      @media(max-width:720px){.cols{flex-direction:column}}
+    </style>
+  </head>
+  <body>
+    <h1>Wireframe — Site WAGA (maquette)</h1>
+    <div class="box header">Header / logo</div>
+    <div class="box nav">Main navigation (Accueil / Waga 2024 / Waga 2026 / Contact)</div>
+    <div class="box hero">Hero: titre + résumé + CTA (Voir programme)</div>
+    <div class="cols">
+      <div class="col">
+        <div class="box">Main content area — sections: Présentation, Programme, Communicateurs</div>
+      </div>
+      <div class="col" style="flex-basis:300px;max-width:360px">
+        <div class="box">Sidebar — Navigation secondaire, informations pratiques, contact</div>
+      </div>
+    </div>
+    <div class="box footer">Footer — copyright / contacts</div>
+  </body>
+</html>
