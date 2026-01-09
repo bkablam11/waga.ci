@@ -1,5 +1,23 @@
 // waga.js - minimal interactivity: countdown, tabs, simple modal for speaker bio
 document.addEventListener('DOMContentLoaded',function(){
+  // Menu hamburger responsive
+  (function(){
+    var toggle = document.getElementById('menu-toggle');
+    var nav = document.querySelector('.top-nav');
+    if(!toggle || !nav) return;
+    toggle.addEventListener('click', function(){
+      var isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    // Fermer le menu au clic sur un lien
+    nav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+
   // Countdown
   function initCountdown(targetId, targetDateStr){
     var el=document.getElementById(targetId);

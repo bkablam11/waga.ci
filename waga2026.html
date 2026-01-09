@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>WAGA — Présentation</title>
@@ -9,18 +8,16 @@
 		<link rel="stylesheet" href="assets/css/waga.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
 	</head>
-		<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+	<body class="is-preload">
 
     <header id="header">
-      <div style="display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:14px 20px">
+      <div class="header-container">
         <a class="logo" href="index.html" title="Accueil"><strong>SEMINAIRE D'ALGEBRE</strong></a>
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
         <nav class="top-nav" role="navigation" aria-label="Navigation principale">
           <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -32,120 +29,99 @@
       </div>
     </header>
 
-							<!-- Accueil / Hero -->
-							<section id="accueil" class="hero">
-								<div class="hero-inner">
-									<div class="hero-text">
-							<h1>WAGA — Workshop d'Algèbre et Géométrie Abidjan 2026</h1>
+	<main>
+
+		<!-- Accueil / Hero -->
+		<section id="accueil" class="hero">
+			<div class="hero-inner">
+				<div class="hero-text">
+					<h1>WAGA — Workshop d'Algèbre et Géométrie Abidjan 2026</h1>
 					<p class="hero-sub">Programme national de rencontres scientifiques et pédagogiques — Abidjan, Vendredi 09 et Samedi 10 janvier 2026</p>
 					<p class="hero-location"><strong>Lieu :</strong> Université Félix Houphouët-Boigny (UFR Mathématiques-Informatique), Salle 206</p>
 					<p class="hero-actions"><a href="#programme" class="button big primary">Voir le programme</a> <a href="#communicateurs" class="button">Communicateurs</a></p>
 					<!-- Countdown timer to 09 Jan 2026 -->
-																				<div id="countdown" class="countdown" role="status" aria-live="polite">Chargement du décompte…</div>
+					<div id="countdown" class="countdown" role="status" aria-live="polite">Chargement du décompte…</div>
+					<!-- Live stream area: embedded YouTube live stream (start=164s) -->
+					<div id="live-wrapper" class="live-wrapper" data-live="#">
+						<div id="live-container" class="live-container" aria-hidden="false"></div>
+						<p class="note" style="margin-top:8px;">WAGA 2026</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-																				<!-- Live stream area: embedded YouTube live stream (start=164s) -->
-																				<div id="live-wrapper" class="live-wrapper" data-live="#">
-																					<div id="live-container" class="live-container" aria-hidden="false">
-																						<div class="video-wrap">
-																							<iframe src="#" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="WAGA Live Stream"></iframe>
-																						</div>
-																					</div>
-																					<p class="note" style="margin-top:8px;">WAGA 2026</p>
-																				</div>
-							</section>
+		<!-- Présentation -->
+		<section id="about" class="waga-section">
+			<h2>Présentation</h2>
+			<p>Le Workshop d'Algèbre et Géométrie (WAGA) est un rassemblement de doctorants, jeunes chercheurs et enseignants-chercheurs visant à partager les avancées de recherche, proposer des cours et faciliter les collaborations. Ces journées se tiennent à Abidjan et rassemblent des participants d'universités régionales.</p>
+			<h3>Contexte</h3>
+			<p>Les doctorants en mathématiques ont besoin d'un suivi régulier de leurs travaux, d'échanges avec leur encadrement et d'un espace pour présenter leurs avancées. Le WAGA répond à ces besoins en offrant conférences, exposés et sessions de travail.</p>
+			<h3>Objectifs</h3>
+			<ul>
+				<li>Faire le point sur l'état d'avancement des thèses et projets des doctorants.</li>
+				<li>Offrir des cours et exposés de haut niveau en algèbre et géométrie.</li>
+				<li>Favoriser la mise en réseau et les collaborations scientifiques.</li>
+			</ul>
+		</section>
 
-							<!-- Présentation -->
-							<section id="about" class="waga-section">
-								<h2>Présentation</h2>
-								<p>Le Workshop d'Algèbre et Géométrie (WAGA) est un rassemblement de doctorants, jeunes chercheurs et enseignants-chercheurs visant à partager les avancées de recherche, proposer des cours et faciliter les collaborations. Ces journées se tiennent à Abidjan et rassemblent des participants d'universités régionales.</p>
-								<h3>Contexte</h3>
-								<p>Les doctorants en mathématiques ont besoin d'un suivi régulier de leurs travaux, d'échanges avec leur encadrement et d'un espace pour présenter leurs avancées. Le WAGA répond à ces besoins en offrant conférences, exposés et sessions de travail.</p>
-								<h3>Objectifs</h3>
-								<ul>
-									<li>Faire le point sur l'état d'avancement des thèses et projets des doctorants.</li>
-									<li>Offrir des cours et exposés de haut niveau en algèbre et géométrie.</li>
-									<li>Favoriser la mise en réseau et les collaborations scientifiques.</li>
-								</ul>
-							</section>
+		<!-- Programme détaillé -->
+		<section id="programme" class="waga-section">
+			<h2>Programme — 09–10 janvier 2026</h2>
+			<p>Le programme ci-dessous reprend l'organisation générale des deux journées. Les horaires et les intitulés des exposés pourront être précisés ultérieurement.</p>
+			<div class="program-table">
+				<table>
+					<thead>
+						<tr><th>Jour</th><th>Horaire</th><th>Activité</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>Jour 1 — Vendredi 09/01/2026</td><td>08:00 – 09:00</td><td>Accueil & Petit-déjeuner — Enregistrement des participants (Université Félix Houphouët-Boigny, Salle 206)</td></tr>
+						<tr><td></td><td>09:05 – 09:40</td><td><strong>IDRISSA YAYA</strong> — Note on AP and Strongly AP Biltrations of Rings (Université Nangui Abrogoua)</td></tr>
+						<tr><td></td><td>09:40 – 10:15</td><td><strong>AKAFFOU N'CHO Cyrille</strong> — Remarks on the set A*(f) and B*(f) where f(L,n) is a good filtration on a Noetherian ring A (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>10:15 – 10:50</td><td><strong>GUIYE NEANGNEHI Jean Roland</strong> — On the Weakened Properties of Analytic Independence and Extensions of the Analytic Spread (Université Nangui Abrogoua)</td></tr>
+						<tr><td></td><td>10:50 – 11:25</td><td><strong>BROU Kouadio Pierre</strong> — Étude de quelques classes d'axe-filtrations de module (Université Nangui Abrogoua)</td></tr>
+						<tr><td></td><td>11:25 – 12:00</td><td><strong>ALLANI Jules</strong> — Les applications harmoniques entre variétés Riemanniennes (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>12:00 – 12:15</td><td>Échanges et discussions générales</td></tr>
+						<tr><td></td><td>12:15 – 14:00</td><td>Pause — Déjeuner</td></tr>
+						<tr><td></td><td>14:00 – 14:30</td><td><strong>SIAKA TRAORÉ</strong> — Une extension du théorème de Cartan aux groupoïdes de Lie (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>14:30 – 15:00</td><td><strong>MAHI Epse ACHI</strong> — Solutions matricielles des équations Diophantiennes (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>15:00 – 15:30</td><td><strong>TCHAMMOU Bagnantissoun Euloge</strong> — On some Diophantine equations involving balancing numbers (IMSP, Bénin)</td></tr>
+						<tr><td></td><td>15:30 – 16:00</td><td>Pause-café</td></tr>
+						<tr><td></td><td>16:00 – 16:30</td><td><strong>KOUAKOU Dongoh Franck Judicaël</strong> — Stability of depth function of good filtrations (Université Nangui Abrogoua)</td></tr>
+						<tr><td></td><td>16:30 – 17:00</td><td><strong>KOUAKOU Kouassi Vincent</strong> — Spectral Geometry of Blockchains: Graphs, Multi-Layers and Predictive Dynamics (Université Nangui Abrogoua)</td></tr>
+						<tr><td></td><td>17:00 – 17:15</td><td>Discussions et clôture de la première journée</td></tr>
+						<tr><td>Jour 2 — Samedi 10/01/2026</td><td>08:00 – 09:00</td><td>Petit-déjeuner</td></tr>
+						<tr><td></td><td>09:00 – 09:30</td><td><strong>Moussa FALL</strong> — Points algébriques sur la courbe de Picard (Université Assane Seck de Ziguinchor, Sénégal)</td></tr>
+						<tr><td></td><td>09:30 – 10:00</td><td><strong>ODJOUMANI Japhet</strong> — Sur quelques diviseurs premiers du nombre de Catalan et du coefficient binomial central (Université d'Abomey-Calavi, Bénin)</td></tr>
+						<tr><td></td><td>10:00 – 10:30</td><td><strong>SORO KOLO FOUSSENI</strong> — On matrix solutions of Nathanson's diophantine equations (Université Alassane Ouattara, Côte d'Ivoire)</td></tr>
+						<tr><td></td><td>10:30 – 10:45</td><td>Discussions</td></tr>
+						<tr><td></td><td>10:45 – 11:00</td><td>Pause-café</td></tr>
+						<tr><td></td><td>11:00 – 11:30</td><td><strong>KIMOU Kouadio Prosper</strong> — Codage de texte efficace sur le cercle unité matriciel (INPHB / LARIT)</td></tr>
+						<tr><td></td><td>11:30 – 12:00</td><td><strong>AKEKE Eric Dago</strong> — On Matrix solutions of the non-linear exponential Diophantine equation (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>12:00 – 13:30</td><td>Pause — Déjeuner</td></tr>
+						<tr><td></td><td>13:30 – 14:00</td><td><strong>KOUROUMA Moussa</strong> — Existence of eigennappings of the tension field for mappings between Riemannian manifolds (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>14:00 – 14:30</td><td><strong>DASSOUNDO MAFOYA Landry</strong> — Pre-anti-flexible bialgebras (Université de Man)</td></tr>
+						<tr><td></td><td>14:30 – 15:00</td><td><strong>SAMA Anzoumana</strong> — Opérateurs différentiels du stabilisateur d'un idéal (Université Polytechnique de SanPédro)</td></tr>
+						<tr><td></td><td>15:15 – 15:45</td><td>Pause-café</td></tr>
+						<tr><td></td><td>15:45 – 16:15</td><td><strong>KOUAKOU Konan Mathias</strong> — Algèbres de Weyl A_n(k) d'ordre n>2 (Université Félix Houphouët-Boigny)</td></tr>
+						<tr><td></td><td>16:15 – 17:00</td><td>Cérémonie de clôture — Remise de certificats, mots du comité scientifique, photo de famille</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="note">Remarque : les intitulés précis des exposés et intervenants seront publiés dans la section Communicateurs.</p>
+		</section>
 
-							<!-- Programme détaillé -->
-							<section id="programme" class="waga-section">
-						<h2>Programme — 09–10 janvier 2026</h2>
-								<p>Le programme ci-dessous reprend l'organisation générale des deux journées. Les horaires et les intitulés des exposés pourront être précisés ultérieurement.</p>
-								<div class="program-table">
-									<table>
-										<thead>
-											<tr><th>Jour</th><th>Horaire</th><th>Activité</th></tr>
-										</thead>
-										<tbody>
-											<tr><td>Jour 1 — Vendredi 09/01/2026</td><td>08:00 – 09:00</td><td>Accueil & Petit-déjeuner — Enregistrement des participants (Université Félix Houphouët-Boigny, Salle 206)</td></tr>
-									<tr><td></td><td>09:05 – 09:40</td><td><strong>IDRISSA YAYA</strong> — Note on AP and Strongly AP Biltrations of Rings (Université Nangui Abrogoua)</td></tr>
-									<tr><td></td><td>09:40 – 10:15</td><td><strong>AKAFFOU N'CHO Cyrille</strong> — Remarks on the set A*(f) and B*(f) where f(L,n) is a good filtration on a Noetherian ring A (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>10:15 – 10:50</td><td><strong>GUIYE NEANGNEHI Jean Roland</strong> — On the Weakened Properties of Analytic Independence and Extensions of the Analytic Spread (Université Nangui Abrogoua)</td></tr>
-									<tr><td></td><td>10:50 – 11:25</td><td><strong>BROU Kouadio Pierre</strong> — Étude de quelques classes d'axe-filtrations de module (Université Nangui Abrogoua)</td></tr>
-									<tr><td></td><td>11:25 – 12:00</td><td><strong>ALLANI Jules</strong> — Les applications harmoniques entre variétés Riemanniennes (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>12:00 – 12:15</td><td>Échanges et discussions générales</td></tr>
-									<tr><td></td><td>12:15 – 14:00</td><td>Pause — Déjeuner</td></tr>
-									<tr><td></td><td>14:00 – 14:30</td><td><strong>SIAKA TRAORÉ</strong> — Une extension du théorème de Cartan aux groupoïdes de Lie (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>14:30 – 15:00</td><td><strong>MAHI Epse ACHI</strong> — Solutions matricielles des équations Diophantiennes (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>15:00 – 15:30</td><td><strong>TCHAMMOU Bagnantissoun Euloge</strong> — On some Diophantine equations involving balancing numbers (IMSP, Bénin)</td></tr>
-									<tr><td></td><td>15:30 – 16:00</td><td>Pause-café</td></tr>
-									<tr><td></td><td>16:00 – 16:30</td><td><strong>KOUAKOU Dongoh Franck Judicaël</strong> — Stability of depth function of good filtrations (Université Nangui Abrogoua)</td></tr>
-									<tr><td></td><td>16:30 – 17:00</td><td><strong>KOUAKOU Kouassi Vincent</strong> — Spectral Geometry of Blockchains: Graphs, Multi-Layers and Predictive Dynamics (Université Nangui Abrogoua)</td></tr>
-									<tr><td></td><td>17:00 – 17:15</td><td>Discussions et clôture de la première journée</td></tr>
-											<tr><td></td><td>14:00 – 14:45</td><td>Cours 1</td></tr>
-											<tr><td></td><td>14:45 – 15:30</td><td>Cours 2</td></tr>
-											<tr><td></td><td>15:30 – 16:00</td><td>Pause-café</td></tr>
-											<tr><td></td><td>16:00 – 16:45</td><td>Cours 3</td></tr>
-											<tr><td></td><td>16:45 – 17:15</td><td>Exposé 1</td></tr>
-											<tr><td></td><td>17:15 – 17:45</td><td>Exposé 2</td></tr>
-											
-											<tr><td>Jour 2 — Samedi 10/01/2026</td><td>08:00 – 09:00</td><td>Petit-déjeuner</td></tr>
-									<tr><td></td><td>09:00 – 09:30</td><td><strong>Moussa FALL</strong> — Points algébriques sur la courbe de Picard (Université Assane Seck de Ziguinchor, Sénégal)</td></tr>
-									<tr><td></td><td>09:30 – 10:00</td><td><strong>ODJOUMANI Japhet</strong> — Sur quelques diviseurs premiers du nombre de Catalan et du coefficient binomial central (Université d'Abomey-Calavi, Bénin)</td></tr>
-									<tr><td></td><td>10:00 – 10:30</td><td><strong>SORO KOLO FOUSSENI</strong> — On matrix solutions of Nathanson's diophantine equations (Université Alassane Ouattara, Côte d'Ivoire)</td></tr>
-									<tr><td></td><td>10:30 – 10:45</td><td>Discussions</td></tr>
-									<tr><td></td><td>10:45 – 11:00</td><td>Pause-café</td></tr>
-									<tr><td></td><td>11:00 – 11:30</td><td><strong>KIMOU Kouadio Prosper</strong> — Codage de texte efficace sur le cercle unité matriciel (INPHB / LARIT)</td></tr>
-									<tr><td></td><td>11:30 – 12:00</td><td><strong>AKEKE Eric Dago</strong> — On Matrix solutions of the non-linear exponential Diophantine equation (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>12:00 – 13:30</td><td>Pause — Déjeuner</td></tr>
-									<tr><td></td><td>13:30 – 14:00</td><td><strong>KOUROUMA Moussa</strong> — Existence of eigennappings of the tension field for mappings between Riemannian manifolds (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>14:00 – 14:30</td><td><strong>DASSOUNDO MAFOYA Landry</strong> — Pre-anti-flexible bialgebras (Université de Man)</td></tr>
-									<tr><td></td><td>14:30 – 15:00</td><td><strong>SAMA Anzoumana</strong> — Opérateurs différentiels du stabilisateur d'un idéal (Université Polytechnique de SanPédro)</td></tr>
-									<tr><td></td><td>15:15 – 15:45</td><td>Pause-café</td></tr>
-									<tr><td></td><td>15:45 – 16:15</td><td><strong>KOUAKOU Konan Mathias</strong> — Algèbres de Weyl A_n(k) d'ordre n>2 (Université Félix Houphouët-Boigny)</td></tr>
-									<tr><td></td><td>16:15 – 17:00</td><td>Cérémonie de clôture — Remise de certificats, mots du comité scientifique, photo de famille</td></tr>
-											<tr><td></td><td>09:00 – 09:45</td><td>Cours 4</td></tr>
-											<tr><td></td><td>09:45 – 10:15</td><td>Exposé 3</td></tr>
-											<tr><td></td><td>10:15 – 10:45</td><td>Exposé 4</td></tr>
-											<tr><td></td><td>10:45 – 11:00</td><td>Pause-café</td></tr>
-											<tr><td></td><td>11:00 – 11:30</td><td>Exposé 5</td></tr>
-											<tr><td></td><td>11:30 – 12:00</td><td>Exposé 6</td></tr>
-											<tr><td></td><td>12:00 – 13:30</td><td>Pause — Déjeuner</td></tr>
-											<tr><td></td><td>13:30 – 14:15</td><td>Exposé 7</td></tr>
-											<tr><td></td><td>14:15 – 14:45</td><td>Exposé 8</td></tr>
-											<tr><td></td><td>14:45 – 15:15</td><td>Exposé 9</td></tr>
-											<tr><td></td><td>15:15 – 15:45</td><td>Pause-café</td></tr>
-											<tr><td></td><td>15:45 – 16:15</td><td>Exposé 10</td></tr>
-											<tr><td></td><td>17:00</td><td>Fin du workshop</td></tr>
-										</tbody>
-									</table>
-								</div>
-								<p class="note">Remarque : les intitulés précis des exposés et intervenants seront publiés dans la section Communicateurs.</p>
-							</section>
+		<!-- Participants -->
+		<section id="participants" class="waga-section">
+			<h2>Participants</h2>
+			<p>Le WAGA rassemble : doctorants, jeunes chercheurs et enseignants en algèbre et géométrie des universités régionales. Les intervenants comprennent des professeurs et des spécialistes invités pour animer cours et exposés.</p>
+			<p>Si vous représentez une structure et souhaitez participer, merci d'utiliser le formulaire de contact pour nous écrire (voir ci-dessous).</p>
+		</section>
 
-							<!-- Participants -->
-							<section id="participants" class="waga-section">
-								<h2>Participants</h2>
-								<p>Le WAGA rassemble : doctorants, jeunes chercheurs et enseignants en algèbre et géométrie des universités régionales. Les intervenants comprennent des professeurs et des spécialistes invités pour animer cours et exposés.</p>
-								<p>Si vous représentez une structure et souhaitez participer, merci d'utiliser le formulaire de contact pour nous écrire (voir ci-dessous).</p>
-							</section>
-
-							<!-- Communicateurs / Liste finale -->
-							<section id="communicateurs" class="waga-section">
-								<h2>Liste finale des communicateurs</h2>
-								<p>Ci-dessous la liste finale des communicateurs retenus pour le WAGA. Pour protéger la confidentialité, les coordonnées personnelles (téléphone, email) ont été retirées. Cliquez sur "Télécharger l'exposé" pour accéder au fichier correspondant (lien Google Drive à remplacer par vos URL réelles).</p>
-								<div class="speakers-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px">
+		<!-- Communicateurs / Liste finale -->
+		<section id="communicateurs" class="waga-section">
+			<h2>Liste finale des communicateurs</h2>
+			<p>Ci-dessous la liste finale des communicateurs retenus pour le WAGA. Pour protéger la confidentialité, les coordonnées personnelles (téléphone, email) ont été retirées. Cliquez sur "Télécharger l'exposé" pour accéder au fichier correspondant (lien Google Drive à remplacer par vos URL réelles).</p>
+			<div class="speakers-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px">
 									<!-- 1 -->
 									<div class="speaker-card">
 								<h4>M. BROU Kouadjo Pierre</h4>
@@ -328,20 +304,19 @@
 								</div>
 							</section>
 
-						</div>
-					</div>
+	</main>
 
+	<!-- Footer -->
+	<footer id="footer" style="margin-top:40px;padding:18px 20px;text-align:center;border-top:1px solid #eee">
+	  <p>&copy; Séminaire d'Algèbre — WAGA</p>
+	</footer>
 
-						</div>
-					</div>
-				</div>
-
-							<!-- Scripts -->
-								<script src="assets/js/jquery.min.js"></script>
-								<script src="assets/js/browser.min.js"></script>
-								<script src="assets/js/breakpoints.min.js"></script>
-								<script src="assets/js/util.js"></script>
-								<script src="assets/js/main.js"></script>
-								<script src="assets/js/waga.js"></script>
-							</body>
-					</html>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/waga.js"></script>
+	</body>
+</html>
