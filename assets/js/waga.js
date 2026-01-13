@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded',function(){
     function tick(){
       var now=Date.now();
       var diff=target-now;
-      if(diff<=0){ el.textContent='Le workshop a commencé.'; clearInterval(timer); return; }
+      if(diff<=0){ el.textContent='Le workshop est terminé.'; clearInterval(timer); return; }
       var days=Math.floor(diff/86400000);
       var hours=Math.floor((diff%86400000)/3600000);
       var minutes=Math.floor((diff%3600000)/60000);
@@ -36,8 +36,13 @@ document.addEventListener('DOMContentLoaded',function(){
     tick();
     var timer=setInterval(tick,1000);
   }
-  // Set countdown to workshop start date (example: 2026-01-09T08:00:00)
-  initCountdown('countdown','2026-01-09T08:00:00');
+  // Set countdown to workshop start date (reads data-start on #countdown if present)
+  var countdownEl = document.getElementById('countdown');
+  if(countdownEl && countdownEl.dataset && countdownEl.dataset.start){
+    initCountdown('countdown', countdownEl.dataset.start);
+  }else{
+    initCountdown('countdown','2026-01-09T08:00:00');
+  }
 
   // Tabs
   document.querySelectorAll('.tab-buttons button').forEach(function(btn){
